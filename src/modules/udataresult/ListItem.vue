@@ -156,6 +156,11 @@ export default {
     }
   },
   watch: {
+    search: function(data){
+      if(data != null | data != ''){
+          this.sresultstatus = false
+      }
+    }
   }
 }
 </script>

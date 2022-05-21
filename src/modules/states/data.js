@@ -59,12 +59,12 @@ export default {
     },
     getters: {
         get_user_data : state => value => {
+            console.log(value)
             if(value == null || value == ''){
                 return state.user_data
             }
             return state.user_data.filter(q => {
                 return q.patient_name.toLowerCase().includes(value)
-                || q.priority.toLowerCase().includes(value)
             })
             // return state.user_data
         },
